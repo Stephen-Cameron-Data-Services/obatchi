@@ -37,13 +37,13 @@ import org.apache.isis.applib.fixturescripts.FixtureResult;
 import au.com.scds.obatchi.dom.base.Result;
 import au.com.scds.obatchi.dom.base.Sample;
 import au.com.scds.obatchi.dom.base.Sampled;
-import au.com.scds.obatchi.dom.base.Test;
+import au.com.scds.obatchi.dom.base.TTT;
 import au.com.scds.obatchi.dom.base.TestGroup;
 import au.com.scds.obatchi.dom.base.TestMultiple;
 import au.com.scds.obatchi.dom.base.TestSingle;
 import au.com.scds.obatchi.dom.base.TestSuite;
-import au.com.scds.obatchi.dom.base.menu.TestRepository;
 import au.com.scds.obatchi.dom.base.repository.ResultRepository;
+import au.com.scds.obatchi.dom.base.repository.TestRepository;
 
 public class TestingMixins {
 	
@@ -185,7 +185,7 @@ public class TestingMixins {
 	}
 
 	private static void createResultsForTestMultiple(Sample sample, TestMultiple multiple) {
-		Test test = multiple.getTest();
+		TTT test = multiple.getTest();
 		if (test instanceof TestSingle) {
 			for (int i = 0; i < multiple.getMultiple(); i++) {
 				Result result = resultRepo.createResult(sample, multiple, (TestSingle) test, null);

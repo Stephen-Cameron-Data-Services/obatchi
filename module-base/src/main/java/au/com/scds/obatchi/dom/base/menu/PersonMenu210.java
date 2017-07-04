@@ -42,8 +42,12 @@ import au.com.scds.obatchi.dom.base.ProductLine;
 import au.com.scds.obatchi.dom.base.ProductType;
 import au.com.scds.obatchi.dom.base.repository.PersonRepository;
 
-@DomainService(nature = NatureOfService.VIEW_MENU_ONLY)
-@DomainServiceLayout(named = "Admin", menuOrder = "210")
+@DomainService(
+		nature = NatureOfService.VIEW_MENU_ONLY,
+		objectType = "obatchi.PersonMenu")
+@DomainServiceLayout(
+		named = "Admin",
+		menuOrder = "210")
 public class PersonMenu210 {
 
 	@Action()

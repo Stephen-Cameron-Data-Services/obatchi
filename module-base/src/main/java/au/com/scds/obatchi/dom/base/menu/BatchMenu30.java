@@ -41,8 +41,12 @@ import au.com.scds.obatchi.dom.base.ProductLine;
 import au.com.scds.obatchi.dom.base.repository.BatchRepository;
 import au.com.scds.obatchi.dom.base.repository.ProductLineRepository;
 
-@DomainService(nature = NatureOfService.VIEW_MENU_ONLY)
-@DomainServiceLayout(named = "Batches", menuOrder = "30")
+@DomainService(
+		nature = NatureOfService.VIEW_MENU_ONLY,
+		objectType = "obatchi.BatchMenu")
+@DomainServiceLayout(
+		named = "Batches", 
+		menuOrder = "30")
 public class BatchMenu30 {
 	
 	@Action()

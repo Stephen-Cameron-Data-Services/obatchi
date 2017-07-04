@@ -42,9 +42,14 @@ import au.com.scds.obatchi.dom.base.FormulationMethod;
 import au.com.scds.obatchi.dom.base.ProductLine;
 import au.com.scds.obatchi.dom.base.Specification;
 import au.com.scds.obatchi.dom.base.repository.FormulationRepository;
+import au.com.scds.obatchi.dom.base.repository.SpecificationRepository;
 
-@DomainService(nature = NatureOfService.VIEW_MENU_ONLY)
-@DomainServiceLayout(named = "Formulations", menuOrder = "40")
+@DomainService(
+		nature = NatureOfService.VIEW_MENU_ONLY,
+		objectType = "obatchi.FormulationMenu")
+@DomainServiceLayout(
+		named = "Formulations",
+		menuOrder = "40")
 public class FormulationMenu40 {
 
 	@Action()

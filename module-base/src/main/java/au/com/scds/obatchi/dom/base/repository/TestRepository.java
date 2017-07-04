@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-package au.com.scds.obatchi.dom.base.menu;
+package au.com.scds.obatchi.dom.base.repository;
 
 import java.util.List;
 
@@ -33,7 +33,7 @@ import org.apache.isis.applib.services.registry.ServiceRegistry2;
 import org.apache.isis.applib.services.repository.RepositoryService;
 
 import au.com.scds.obatchi.dom.base.Sample;
-import au.com.scds.obatchi.dom.base.Test;
+import au.com.scds.obatchi.dom.base.TTT;
 import au.com.scds.obatchi.dom.base.TestGroup;
 import au.com.scds.obatchi.dom.base.TestMultiple;
 import au.com.scds.obatchi.dom.base.TestSingle;
@@ -96,7 +96,7 @@ public class TestRepository {
 		return repositoryService.firstMatch(new QueryDefault<>(TestSuite.class, "findById", "id", id));
 	}
 
-	public TestMultiple createTestMultiple(Sample sample, Test test, Integer multiples) {
+	public TestMultiple createTestMultiple(Sample sample, TTT test, Integer multiples) {
 		if (test == null || multiples == null)
 			return null;
 		final TestMultiple multiple = new TestMultiple();

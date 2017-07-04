@@ -42,8 +42,12 @@ import au.com.scds.obatchi.dom.base.repository.ProducerRepository;
 import au.com.scds.obatchi.dom.base.repository.ProductLineRepository;
 import au.com.scds.obatchi.dom.base.repository.ProductTypeRepository;
 
-@DomainService(nature = NatureOfService.VIEW_MENU_ONLY)
-@DomainServiceLayout(named = "Products", menuOrder = "20")
+@DomainService(
+		nature = NatureOfService.VIEW_MENU_ONLY,
+		objectType = "obatchi.ProductLineMenu")
+@DomainServiceLayout(
+		named = "Products",
+		menuOrder = "20")
 public class ProductLineMenu20 {
 
 	@Action()

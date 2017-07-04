@@ -51,7 +51,7 @@ import org.apache.isis.applib.annotation.DomainObject;
 @PersistenceCapable(identityType = IdentityType.DATASTORE, schema="obatchi")
 @Inheritance(strategy = InheritanceStrategy.SUPERCLASS_TABLE)
 @Discriminator(value="GROUP")
-public class TestGroup extends Test {
+public class TestGroup extends TTT {
 
     @XmlElement(name = "test-single")
     @Join

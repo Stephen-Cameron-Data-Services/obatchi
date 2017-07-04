@@ -36,8 +36,12 @@ import au.com.scds.obatchi.dom.base.Client;
 import au.com.scds.obatchi.dom.base.Receipt;
 import au.com.scds.obatchi.dom.base.repository.SaleRepository;
 
-@DomainService(nature = NatureOfService.VIEW_MENU_ONLY)
-@DomainServiceLayout(named = "Receipts", menuOrder = "102")
+@DomainService(
+		nature = NatureOfService.VIEW_MENU_ONLY,
+		objectType = "obatchi.ReceiptsMenu")
+@DomainServiceLayout(
+		named = "Receipts",
+		menuOrder = "102")
 public class ReceiptsMenu102 {
 
 	@Action()

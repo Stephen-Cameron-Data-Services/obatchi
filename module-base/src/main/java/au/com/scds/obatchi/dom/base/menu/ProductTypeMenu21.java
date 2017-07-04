@@ -36,8 +36,12 @@ import org.apache.isis.applib.annotation.ParameterLayout;
 import au.com.scds.obatchi.dom.base.ProductType;
 import au.com.scds.obatchi.dom.base.repository.ProductTypeRepository;
 
-@DomainService(nature = NatureOfService.VIEW_MENU_ONLY)
-@DomainServiceLayout(named = "Products", menuOrder = "21")
+@DomainService(
+		nature = NatureOfService.VIEW_MENU_ONLY,
+		objectType = "obatchi.ProductTypeMenu")
+@DomainServiceLayout(
+		named = "Products",
+		menuOrder = "21")
 public class ProductTypeMenu21 {
 
 	@Action()

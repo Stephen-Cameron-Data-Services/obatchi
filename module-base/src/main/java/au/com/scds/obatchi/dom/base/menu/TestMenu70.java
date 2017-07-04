@@ -17,9 +17,14 @@ import au.com.scds.obatchi.dom.base.Sample;
 import au.com.scds.obatchi.dom.base.TestGroup;
 import au.com.scds.obatchi.dom.base.TestSingle;
 import au.com.scds.obatchi.dom.base.TestSuite;
+import au.com.scds.obatchi.dom.base.repository.TestRepository;
 
-@DomainService(nature = NatureOfService.VIEW_MENU_ONLY)
-@DomainServiceLayout(named = "Tests", menuOrder = "70")
+@DomainService(
+		nature = NatureOfService.VIEW_MENU_ONLY,
+		objectType = "obatchi.TestMenu")
+@DomainServiceLayout(
+		named = "Tests",
+		menuOrder = "70")
 public class TestMenu70 {
 
 	@Action()

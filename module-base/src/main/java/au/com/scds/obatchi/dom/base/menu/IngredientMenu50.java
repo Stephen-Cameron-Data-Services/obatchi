@@ -45,8 +45,12 @@ import au.com.scds.obatchi.dom.base.ProductLine;
 import au.com.scds.obatchi.dom.base.ProductType;
 import au.com.scds.obatchi.dom.base.repository.IngredientRepository;
 
-@DomainService(nature = NatureOfService.VIEW_MENU_ONLY)
-@DomainServiceLayout(named = "Ingredients", menuOrder = "50")
+@DomainService(
+		nature = NatureOfService.VIEW_MENU_ONLY,
+		objectType = "obatchi.IngredientMenu")
+@DomainServiceLayout(
+		named = "Ingredients",
+		menuOrder = "50")
 public class IngredientMenu50 {
 
 	@Action()

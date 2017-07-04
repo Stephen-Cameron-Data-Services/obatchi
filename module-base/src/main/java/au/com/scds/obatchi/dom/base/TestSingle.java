@@ -50,7 +50,7 @@ import org.apache.isis.applib.annotation.DomainObject;
 @Inheritance(strategy = InheritanceStrategy.SUPERCLASS_TABLE)
 @Discriminator(value="SINGLE")
 public class TestSingle
-    extends Test
+    extends TTT
 {
 	@Column(allowsNull="true")
     protected Result result;

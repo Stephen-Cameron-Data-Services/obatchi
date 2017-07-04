@@ -99,7 +99,7 @@ public class Result {
 	/**
 	 * Gets the value of the test property.
 	 * 
-	 * @return possible object is {@link Test }
+	 * @return possible object is {@link TTT }
 	 * 
 	 */
 	public TestSingle getTest() {
@@ -110,7 +110,7 @@ public class Result {
 	 * Sets the value of the test property.
 	 * 
 	 * @param value
-	 *            allowed object is {@link Test }
+	 *            allowed object is {@link TTT }
 	 * 
 	 */
 	public void setTest(TestSingle value) {

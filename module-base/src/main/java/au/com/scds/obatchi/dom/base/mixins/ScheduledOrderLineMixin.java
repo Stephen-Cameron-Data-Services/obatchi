@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-package au.com.scds.obatchi.dom.base.menu;
+package au.com.scds.obatchi.dom.base.mixins;
 
 import java.util.List;
 

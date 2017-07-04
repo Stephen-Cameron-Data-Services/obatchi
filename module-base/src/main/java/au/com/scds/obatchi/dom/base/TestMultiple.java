@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.jdo.annotations.Column;
+import javax.jdo.annotations.Discriminator;
 import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
@@ -29,7 +30,7 @@ public class TestMultiple {
 	@Column(allowsNull="false")
 	protected int multiple;
 	@Column(allowsNull="false")
-	protected Test test;
+	protected TTT test;
     @Persistent(mappedBy="sampleTest")
 	protected List<Result> results = new ArrayList<>();
     
@@ -41,11 +42,11 @@ public class TestMultiple {
 		this.sample = sample;
 	}
 
-	public Test getTest() {
+	public TTT getTest() {
 		return test;
 	}
 
-	public void setTest(Test test) {
+	public void setTest(TTT test) {
 		this.test = test;
 	}
 

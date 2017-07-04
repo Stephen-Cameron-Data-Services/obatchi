@@ -44,8 +44,12 @@ import au.com.scds.obatchi.dom.base.SiUnit;
 import au.com.scds.obatchi.dom.base.repository.IngredientRepository;
 import au.com.scds.obatchi.dom.base.repository.SupplierRepository;
 
-@DomainService(nature = NatureOfService.VIEW_MENU_ONLY)
-@DomainServiceLayout(named = "Admin", menuOrder = "220")
+@DomainService(
+		nature = NatureOfService.VIEW_MENU_ONLY,
+		objectType = "obatchi.SupplierMenu")
+@DomainServiceLayout(
+		named = "Admin",
+		menuOrder = "220")
 public class SupplierMenu220 {
 	
 	@Action()

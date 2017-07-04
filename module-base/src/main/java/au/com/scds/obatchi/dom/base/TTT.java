@@ -60,20 +60,21 @@ import org.apache.isis.applib.annotation.DomainObject;
  * 
  * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Test", propOrder = { "testName" })
-@XmlSeeAlso({
-    TestSuite.class,
-    TestGroup.class,
-    TestSingle.class
-})
-@DomainObject(objectType = "Test")
+//@XmlAccessorType(XmlAccessType.FIELD)
+//@XmlType(name = "Test", propOrder = { "testName" })
+//@XmlSeeAlso({
+//    TestSuite.class,
+//    TestGroup.class,
+//    TestSingle.class
+//})
+
+@DomainObject(objectType="Test")
 @PersistenceCapable(identityType = IdentityType.DATASTORE, schema="obatchi")
 @Inheritance(strategy = InheritanceStrategy.NEW_TABLE)
-@Discriminator(column = "type")
-public class Test {
+@Discriminator(column="discriminator", value="TEST")
+public class TTT {
 
-	@XmlElement(name = "test-name", required = true)
+	//@XmlElement(name = "test-name", required = true)
 	@Column(allowsNull = "false")
 	protected String testName;
 

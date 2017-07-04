@@ -34,8 +34,12 @@ import au.com.scds.obatchi.dom.base.IngredientSupply;
 import au.com.scds.obatchi.dom.base.Sample;
 import au.com.scds.obatchi.dom.base.repository.SampleRepository;
 
-@DomainService(nature = NatureOfService.VIEW_MENU_ONLY)
-@DomainServiceLayout(named = "Samples", menuOrder = "84")
+@DomainService(
+		nature = NatureOfService.VIEW_MENU_ONLY,
+		objectType = "obatchi.IngredientSupplySampleMenu")
+@DomainServiceLayout(
+		named = "Samples",
+		menuOrder = "84")
 public class IngredientSupplySampleMenu84 {
 	
 	@Action()

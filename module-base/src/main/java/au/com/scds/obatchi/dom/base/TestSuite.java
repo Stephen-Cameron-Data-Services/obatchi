@@ -10,6 +10,7 @@ package au.com.scds.obatchi.dom.base;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.jdo.annotations.Discriminator;
 import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
@@ -52,8 +53,9 @@ import org.apache.isis.applib.annotation.DomainObject;
 @XmlType(name = "TestSuite", propOrder = { "tests", "testGroups" })
 @DomainObject(objectType = "TestSuite")
 @PersistenceCapable(identityType = IdentityType.DATASTORE, schema="obatchi")
-@Inheritance(strategy = InheritanceStrategy.NEW_TABLE)
-public class TestSuite extends Test {
+@Inheritance(strategy = InheritanceStrategy.SUPERCLASS_TABLE)
+@Discriminator(value="SUITE")
+public class TestSuite extends TTT {
 	
     @XmlElement(name = "test-single")
     @Join
